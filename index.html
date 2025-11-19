@@ -1,0 +1,250 @@
+<!DOCTYPE html> <!-- Declara que este documento es HTML5 -->
+<html lang="es"> <!-- Etiqueta raíz del documento, especifica idioma español -->
+<head> <!-- Sección de metadatos del documento -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <title>Actividad 2 - Fundamentos de Sistemas Web</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+<body> <!-- Cuerpo del documento donde va el contenido visible -->
+    
+    <!-- Botones de Navegación entre páginas -->
+    <div class="nav-buttons"> <!-- Contenedor para los botones de navegación -->
+        <button class="nav-btn" onclick="showPage('page1')">Portada</button> <!-- Botón para mostrar página 1 -->
+        <button class="nav-btn" onclick="showPage('page2')">Hoja de Vida</button> <!-- Botón para mostrar página 2 -->
+    </div>
+
+    <!-- PÁGINA 1 - PORTADA DE LA ACTIVIDAD -->
+    <div id="page1" class="page active"> <!-- Contenedor de la página 1 con clase activa -->
+        <div class="container"> <!-- Contenedor principal para centrar contenido -->
+            <div class="portada"> <!-- Sección de portada -->
+                
+                <!-- Logo de la universidad -->
+                <div class="logo-espe-real"> <!-- Contenedor del logo -->
+                    <img src="assets/images/imagen_universidad1.png" alt="Logo Universidad ESPE" class="logo-real"> <!-- Imagen del logo -->
+                </div>
+                
+                <!-- Títulos principales -->
+                <h1>Universidad de las Fuerzas Armadas – ESPE</h1> <!-- Título principal -->
+                <h2>Fundamentos de Sistemas Web</h2> <!-- Subtítulo -->
+                
+                <!-- Caja de información de la actividad -->
+                <div class="info-box"> <!-- Contenedor de información -->
+                    <div class="info-item"> <!-- Elemento de información individual -->
+                        <strong>Pregrado:</strong> IV Nivel - Oct 25 - Mar 26 <!-- Texto con etiqueta strong -->
+                    </div>
+                    <div class="info-item">
+                        <strong>Materia:</strong> Fundamentos de Sistemas Web
+                    </div>
+                    <div class="info-item">
+                        <strong>NRC:</strong> 29286
+                    </div>
+                    <div class="info-item">
+                        <strong>Unidad:</strong> I
+                    </div>
+                    <div class="info-item">
+                        <strong>Actividad de Aprendizaje:</strong> No. 2 - Página Web - Hoja de Vida
+                    </div>
+                    <div class="info-item">
+                        <strong>Autor:</strong> David Ivan Granada Pachacama
+                    </div>
+                    <div class="info-item">
+                        <strong>Docente:</strong> Ing. Alexander Omar Badeon Andrade Mgr.
+                    </div>
+                    <div class="info-item">
+                        <strong>Fecha:</strong> jueves, 20 de noviembre del 2025
+                    </div>
+                    <div class="info-item">
+                        <strong>Lugar:</strong> Quito - Ecuador
+                    </div>
+                </div>
+                
+                <!-- Sección de firma y cita -->
+                <div class="firma"> <!-- Contenedor de la firma -->
+                    <p>"La tecnología es solo una herramienta. En términos de motivar a los niños y lograr que trabajen juntos, el profesor es lo más importante."</p> <!-- Cita -->
+                    <p>- Bill Gates</p> <!-- Autor de la cita -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 2 - HOJA DE VIDA PERSONAL -->
+    <div id="page2" class="page"> <!-- Contenedor de la página 2 -->
+        <div class="container"> <!-- Contenedor principal -->
+            <div class="hoja-vida"> <!-- Sección de hoja de vida -->
+                
+                <!-- Encabezado de la hoja de vida -->
+                <div class="header-hv"> <!-- Cabecera de la hoja de vida -->
+                    <h1>David Iván Granada Pachacama</h1> <!-- Nombre completo -->
+                    <p>Estudiante de Ingeniería en Tecnologías de la Información</p> <!-- Título profesional -->
+                </div>
+                
+                <!-- Información universitaria -->
+                <div class="university-info"> <!-- Contenedor de info universitaria -->
+                    <div class="university-logo-real"> <!-- Contenedor del logo pequeño -->
+                        <img src="assets/images/imagen_universidad1.png" alt="Logo ESPE" class="logo-real-small"> <!-- Logo pequeño -->
+                    </div>
+                    <div class="university-text"> <!-- Texto informativo universitario -->
+                        <h3>Universidad de las Fuerzas Armadas - ESPE</h3> <!-- Nombre universidad -->
+                        <p>Fundamentos de Sistemas Web - NRC: 29286</p> <!-- Detalles del curso -->
+                    </div>
+                </div>
+                
+                <!-- Contenido principal dividido en dos columnas -->
+                <div class="main-content"> <!-- Contenedor flexible para sidebar y contenido -->
+                    
+                    <!-- BARRA LATERAL - Información personal -->
+                    <div class="sidebar"> <!-- Columna lateral -->
+                        
+                        <!-- Foto del estudiante -->
+                        <div class="foto-estudiante1"> <!-- Contenedor de la foto -->
+                            <img src="assets/images/foto_estudiante1.png" alt="Foto de David Granada" class="foto-real"> <!-- Imagen de perfil -->
+                            <div class="texto-foto">David Granada</div> <!-- Texto superpuesto en la foto -->
+                        </div>
+                        
+                        <!-- NUEVA SECCIÓN: Código QR -->
+                        <div class="qr-section"> <!-- Contenedor para el código QR -->
+                            <div class="qr-container"> <!-- Contenedor de la imagen QR -->
+                                <img src="assets/images/qr_in.png" alt="Código QR de contacto" class="qr-image"> <!-- Imagen del código QR -->
+                            </div>
+                            <div class="qr-text"> <!-- Texto descriptivo del QR -->
+                                <p>Escanea para contactarme</p> <!-- Instrucción para el usuario -->
+                            </div>
+                        </div>
+                        
+                        <!-- Sección de información personal -->
+                        <div class="sidebar-section"> <!-- Sección individual del sidebar -->
+                            <h3>Información Personal</h3> <!-- Título de sección -->
+                            <ul> <!-- Lista sin orden -->
+                                <li><strong>Fecha Nacimiento:</strong> 27 Enero 1992</li> <!-- Elemento de lista -->
+                                <li><strong>Nacionalidad:</strong> Ecuatoriana</li>
+                                <li><strong>Email:</strong> digranada@espe.edu.ec</li>
+                                <li><strong>Teléfono:</strong> +593 98 385 3085</li>
+                                <li><strong>Dirección:</strong> Quito, Ecuador</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Sección de habilidades técnicas -->
+                        <div class="sidebar-section">
+                            <h3>Habilidades Técnicas</h3>
+                            <div class="skills"> <!-- Contenedor flexible para habilidades -->
+                                <span class="skill-tag">HTML5</span> <!-- Etiqueta de habilidad -->
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">React</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Sección de idiomas -->
+                        <div class="sidebar-section">
+                            <h3>Idiomas</h3>
+                            <ul>
+                                <li>Español (Nativo)</li> <!-- Elemento de lista de idioma -->
+                                <li>Inglés (Intermedio B1)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- CONTENIDO PRINCIPAL - Información profesional -->
+                    <div class="content"> <!-- Columna de contenido principal -->
+                        
+                        <!-- Sección de perfil profesional -->
+                        <div class="content-section"> <!-- Sección de contenido -->
+                            <h2>Perfil Profesional</h2> <!-- Título de sección -->
+                            <p>Estudiante dedicado de Ingeniería en Tecnologías de la Información en la Universidad de las Fuerzas Armadas ESPE. Apasionado por el desarrollo de software y la innovación tecnológica. Con sólidas habilidades en programación, resolución de problemas y trabajo en equipo. Busco oportunidades para aplicar mis conocimientos académicos en proyectos reales y continuar desarrollándome profesionalmente en el campo de la tecnología.</p> <!-- Párrafo descriptivo -->
+                        </div>
+                        
+                        <!-- Sección de formación académica -->
+                        <div class="content-section">
+                            <h2>Formación Académica</h2>
+                            
+                            <!-- Educación universitaria -->
+                            <div class="info-item"> <!-- Elemento de información -->
+                                <h3>Educación Universitaria</h3> <!-- Subtítulo -->
+                                <p><strong>Universidad de las Fuerzas Armadas - ESPE</strong></p> <!-- Institución en negrita -->
+                                <p>Ingeniería en Tecnologías de la Información | Actualidad</p> <!-- Detalles del estudio -->
+                                <p><em>Semestre actual: Cuarto semestre</em></p> <!-- Información adicional en cursiva -->
+                            </div>
+                            
+                            <!-- Educación secundaria -->
+                            <div class="info-item">
+                                <h3>Educación Secundaria</h3>
+                                <p><strong>Instituto Tecnológico Superior "Cinco de Junio"</strong></p>
+                                <p>Bachiller en Ciencias Físicas y Matemáticas | 2011</p>
+                            </div>
+                            
+                            <!-- Educación primaria -->
+                            <div class="info-item">
+                                <h3>Educación Primaria</h3>
+                                <p><strong>Unidad Educativa Municipal "Julio Enrique Moreno"</strong></p>
+                                <p>Educación Básica | 2018</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Sección de experiencia laboral -->
+                        <div class="content-section">
+                            <h2>Experiencia</h2>
+                            
+                            <!-- Experiencia en proyecto universitario -->
+                            <div class="info-item">
+                                <h3>Proyecto Universitario - Sistema de Gestión Académica</h3>
+                                <p><strong>Desarrollador Frontend</strong> | Oct 2025 - Nov 2025</p> <!-- Puesto y fecha -->
+                                <p>Participé en el desarrollo de una aplicación web para la gestión de calificaciones y asistencia de estudiantes, utilizando HTML, CSS y JavaScript. Implementé interfaces responsivas y funcionalidades de usuario.</p> <!-- Descripción de responsabilidades -->
+                            </div>
+                            
+                            <!-- Experiencia en URS -->
+                            <div class="info-item">
+                                <h3>Unidad del Registro Social - URS</h3>
+                                <p><strong>Supervisor de Campo</strong> | Nov 2023</p>
+                                <p>Colaboro en la organización de talleres y eventos para promover el interés por la programación entre los estudiantes de la universidad. Ayudo en la enseñanza de conceptos básicos de Asignaturas de Ciencias Exactas a nuevos miembros.</p>
+                            </div>
+
+                            <!-- Experiencia como docente -->
+                            <div class="info-item">
+                                <h3>Preuniversitario "Hawking"</h3>
+                                <p><strong>Docente</strong> | Feb 2014 - Feb 2022</p>
+                                <p>Participé en el desarrollo cognitivo y dominio aptitudinal para estudiantes de bachillerato, nivelando académicamente su conocimiento. Implementé interfaces simuladores para su mejora de práctica y precisión en evaluaciones.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Sección de cursos relevantes -->
+                        <div class="content-section">
+                            <h2>Cursos Relevantes</h2>
+                            <ul> <!-- Lista de cursos -->
+                                <li>Programación Orientada a Objetos</li> <!-- Curso individual -->
+                                <li>Estructuras de Datos y Algoritmos</li>
+                                <li>Sistemas de Bases de Datos</li>
+                                <li>Desarrollo Web Frontend</li>
+                                <li>Redes de Comunicación</li>
+                                <li>Interfaces y Multimedia</li>
+                                <li>Administración Mantenimiento de Sistemas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript para la funcionalidad de navegación -->
+    <script>
+        // Función para mostrar una página específica y ocultar las demás
+        function showPage(pageId) {
+            // Oculta todas las páginas removiendo la clase 'active'
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active'); // Remueve clase activa de todas las páginas
+            });
+            
+            // Muestra la página seleccionada agregando la clase 'active'
+            document.getElementById(pageId).classList.add('active'); // Agrega clase activa a la página seleccionada
+        }
+        
+        // Muestra la página 1 (portada) por defecto al cargar
+        showPage('page1'); // Llama a la función para mostrar página 1 al inicio
+    </script>
+</body>
+</html>

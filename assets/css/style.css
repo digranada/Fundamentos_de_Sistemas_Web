@@ -1,0 +1,451 @@
+/* ===== ESTILOS GENERALES ===== */
+
+/* Reset de márgenes y padding para consistencia entre navegadores */
+* {
+    margin: 0;          /* Elimina márgenes por defecto de todos los elementos */
+    padding: 0;         /* Elimina padding por defecto de todos los elementos */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo de width/height */
+}
+
+/* Estilos base del cuerpo del documento */
+body {
+    font-family: 'Arial', sans-serif; /* Define la fuente principal del texto */
+    line-height: 1.6;                /* Establece el interlineado para mejor legibilidad */
+    color: #333;                     /* Define el color principal del texto */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Fondo con gradiente azul-morado */
+    min-height: 100vh;               /* Establece la altura mínima como el 100% del viewport */
+}
+
+/* Estilos para todas las páginas */
+.page {
+    display: none;      /* Oculta todas las páginas por defecto */
+    min-height: 100vh;  /* Altura mínima de toda la ventana del navegador */
+    padding: 20px;      /* Espaciado interno de 20px en todos los lados */
+}
+
+/* Clase para mostrar la página activa */
+.active {
+    display: block;     /* Muestra el elemento como bloque cuando tiene esta clase */
+}
+
+/* Contenedor principal que centra el contenido */
+.container {
+    max-width: 1000px;              /* Ancho máximo de 1000px para pantallas grandes */
+    margin: 0 auto;                 /* Centrado horizontal automático */
+    background: white;              /* Fondo blanco para el contenedor */
+    border-radius: 15px;            /* Esquinas redondeadas de 15px */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra exterior para efecto de elevación */
+    overflow: hidden;               /* Oculta cualquier contenido que sobresalga del contenedor */
+}
+
+/* ===== BOTONES DE NAVEGACIÓN ===== */
+
+.nav-buttons {
+    position: fixed;    /* Posición fija en la pantalla */
+    top: 20px;          /* 20px desde la parte superior */
+    right: 20px;        /* 20px desde el borde derecho */
+    z-index: 1000;      /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilos para los botones de navegación */
+.nav-btn {
+    background: #2c3e50;    /* Color de fondo azul oscuro */
+    color: white;           /* Color del texto blanco */
+    border: none;           /* Elimina el borde por defecto */
+    padding: 12px 20px;     /* Espaciado interno: 12px vertical, 20px horizontal */
+    margin: 0 5px;          /* Margen horizontal de 5px entre botones */
+    border-radius: 25px;    /* Esquinas completamente redondeadas */
+    cursor: pointer;        /* Cambia el cursor a mano al pasar sobre el botón */
+    font-weight: bold;      /* Texto en negrita */
+    transition: all 0.3s ease; /* Transición suave de 0.3s para todos los efectos */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra suave del botón */
+}
+
+/* Efectos al pasar el mouse sobre los botones */
+.nav-btn:hover {
+    background: #34495e;    /* Color de fondo más claro al hacer hover */
+    transform: translateY(-2px); /* Efecto de elevación: se mueve 2px hacia arriba */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* Sombra más pronunciada al hacer hover */
+}
+
+/* ===== PÁGINA 1 - PORTADA ===== */
+
+.portada {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Mismo gradiente que el body */
+    color: white;           /* Texto blanco para contraste con el fondo */
+    text-align: center;     /* Centra todo el texto horizontalmente */
+    padding: 60px 40px;     /* Espaciado interno generoso: 60px vertical, 40px horizontal */
+}
+
+/* Contenedor para el logo real de la ESPE en portada */
+.logo-espe-real {
+    width: 150px;           /* Ancho fijo de 150px */
+    height: 150px;          /* Alto fijo de 150px */
+    margin: 0 auto 30px;    /* Centrado automático y 30px de margen inferior */
+    border-radius: 50%;     /* Forma circular perfecta */
+    overflow: hidden;       /* Oculta cualquier parte de la imagen que sobresalga */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* Sombra pronunciada para efecto 3D */
+    border: 4px solid white; /* Borde blanco de 4px de grosor */
+}
+
+/* Estilos para la imagen del logo */
+.logo-real {
+    width: 100%;            /* Ocupa el 100% del ancho del contenedor */
+    height: 100%;           /* Ocupa el 100% del alto del contenedor */
+    object-fit: cover;      /* Ajusta la imagen para cubrir todo el espacio disponible */
+    display: block;         /* Elimina el espacio inferior que tienen las imágenes inline */
+}
+
+/* Título principal de la portada */
+.portada h1 {
+    font-size: 2.5em;       /* Tamaño de fuente muy grande (2.5 veces el tamaño base) */
+    margin-bottom: 10px;    /* 10px de espacio inferior */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra de texto para mejor legibilidad */
+}
+
+/* Subtítulo de la portada */
+.portada h2 {
+    font-size: 1.8em;       /* Tamaño de fuente grande (1.8 veces el tamaño base) */
+    margin-bottom: 30px;    /* 30px de espacio inferior */
+    font-weight: 300;       /* Peso de fuente ligero (no tan negrita) */
+}
+
+/* Caja de información con efecto glassmorphism */
+.info-box {
+    background: rgba(255,255,255,0.1); /* Fondo blanco semitransparente (10% opacidad) */
+    backdrop-filter: blur(10px);       /* Efecto de desenfoque del fondo detrás del elemento */
+    padding: 30px;          /* Espaciado interno de 30px en todos los lados */
+    border-radius: 15px;    /* Esquinas redondeadas de 15px */
+    margin: 30px 0;         /* 30px de margen superior e inferior */
+    text-align: left;       /* Alinea el texto a la izquierda (anula el centrado del contenedor) */
+    border: 1px solid rgba(255,255,255,0.2); /* Borde sutil blanco semitransparente */
+}
+
+/* Elementos individuales de información */
+.info-item {
+    margin-bottom: 15px;    /* 15px de espacio entre cada elemento */
+    font-size: 1.1em;       /* Tamaño de fuente ligeramente mayor (1.1 veces el tamaño base) */
+}
+
+/* Texto en negrita dentro de info-item */
+.info-item strong {
+    color: #f1c40f;         /* Color amarillo dorado para destacar el texto fuerte */
+}
+
+/* Sección de firma y cita */
+.firma {
+    margin-top: 40px;       /* 40px de espacio superior */
+    border-top: 2px solid rgba(255,255,255,0.3); /* Línea superior decorativa semitransparente */
+    padding-top: 20px;      /* 20px de espacio interno superior */
+}
+
+/* ===== PÁGINA 2 - HOJA DE VIDA ===== */
+
+.hoja-vida {
+    padding: 40px;          /* Espaciado interno generoso de 40px en todos los lados */
+}
+
+/* Encabezado de la hoja de vida */
+.header-hv {
+    background: linear-gradient(135deg, #2c3e50, #4a6491); /* Gradiente azul oscuro a azul medio */
+    color: white;           /* Texto blanco para contraste */
+    padding: 40px;          /* Espaciado interno de 40px */
+    text-align: center;     /* Centra el texto horizontalmente */
+    border-radius: 10px 10px 0 0; /* Esquinas redondeadas solo en la parte superior */
+}
+
+/* Título principal de la hoja de vida */
+.header-hv h1 {
+    font-size: 2.2em;       /* Tamaño de fuente muy grande */
+    margin-bottom: 10px;    /* 10px de espacio inferior */
+}
+
+/* Subtítulo de la hoja de vida */
+.header-hv p {
+    font-size: 1.3em;       /* Tamaño de fuente grande */
+    opacity: 0.9;           /* Ligera transparencia (90% opacidad) */
+}
+
+/* INFORMACIÓN UNIVERSITARIA CON LOGO REAL */
+
+.university-info {
+    background: #f8f9fa;    /* Fondo gris muy claro */
+    padding: 20px;          /* Espaciado interno de 20px */
+    border-radius: 10px;    /* Esquinas redondeadas de 10px */
+    margin: 20px 0;         /* 20px de margen superior e inferior */
+    display: flex;          /* Usa flexbox para alinear elementos hijos */
+    align-items: center;    /* Centra verticalmente los elementos hijos */
+}
+
+/* Logo pequeño de la universidad */
+.university-logo-real {
+    width: 70px;            /* Ancho pequeño de 70px */
+    height: 70px;           /* Alto pequeño de 70px */
+    border-radius: 50%;     /* Forma circular */
+    overflow: hidden;       /* Oculta contenido que sobresalga */
+    margin-right: 15px;     /* 15px de espacio a la derecha */
+    border: 3px solid #2c3e50; /* Borde azul oscuro de 3px */
+}
+
+/* Estilos para el logo pequeño */
+.logo-real-small {
+    width: 100%;            /* Ocupa todo el ancho del contenedor */
+    height: 100%;           /* Ocupa todo el alto del contenedor */
+    object-fit: cover;      /* Ajusta la imagen para cubrir el espacio */
+    display: block;         /* Elimina espacio inferior de imágenes inline */
+}
+
+/* Texto de información universitaria */
+.university-text h3 {
+    color: #2c3e50;        /* Color azul oscuro */
+    margin: 0;              /* Elimina márgenes por defecto */
+}
+
+.university-text p {
+    color: #666;            /* Color gris medio */
+    margin: 5px 0 0 0;      /* 5px de margen superior, 0 en los otros lados */
+}
+
+/* Contenedor principal de contenido dividido en dos columnas */
+.main-content {
+    display: flex;          /* Usa flexbox para diseño de columnas */
+    gap: 30px;              /* Espacio de 30px entre las columnas */
+    margin-top: 30px;       /* 30px de margen superior */
+}
+
+/* ===== BARRA LATERAL ===== */
+
+.sidebar {
+    flex: 1;                /* Ocupa 1 parte del espacio disponible (relación 1:2 con .content) */
+    background: #f8f9fa;    /* Fondo gris muy claro */
+    padding: 25px;          /* Espaciado interno de 25px */
+    border-radius: 10px;    /* Esquinas redondeadas de 10px */
+    border: 2px solid #e9ecef; /* Borde sutil gris claro */
+}
+
+/* Contenedor para la foto del estudiante */
+.foto-estudiante1 {
+    width: 200px;           /* Ancho fijo de 200px */
+    height: 240px;          /* Alto fijo de 240px */
+    border-radius: 10px;    /* Esquinas redondeadas de 10px */
+    margin: 0 auto 25px;    /* Centrado automático y 25px de margen inferior */
+    position: relative;     /* Permite posicionamiento absoluto de elementos hijos */
+    overflow: hidden;       /* Oculta contenido que sobresalga del contenedor */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* Sombra para efecto 3D */
+    border: 3px solid #4a6491; /* Borde azul de 3px */
+}
+
+/* Estilos para la foto real del estudiante */
+.foto-real {
+    width: 100%;            /* Ocupa todo el ancho del contenedor */
+    height: 100%;           /* Ocupa todo el alto del contenedor */
+    object-fit: cover;      /* Ajusta la imagen para cubrir el espacio */
+    display: block;         /* Elimina espacio inferior de imágenes inline */
+}
+
+/* Texto superpuesto en la foto */
+.texto-foto {
+    position: absolute;     /* Posicionamiento absoluto respecto al contenedor padre */
+    bottom: 0;              /* Pegado al fondo del contenedor */
+    left: 0;                /* Pegado al borde izquierdo */
+    right: 0;               /* Pegado al borde derecho */
+    background: rgba(44, 62, 80, 0.8); /* Fondo azul oscuro semitransparente (80% opacidad) */
+    color: white;           /* Texto blanco */
+    padding: 8px;           /* Espaciado interno de 8px */
+    text-align: center;     /* Texto centrado horizontalmente */
+    font-size: 0.9em;       /* Tamaño de fuente pequeño (0.9 veces el tamaño base) */
+}
+
+/* Secciones de la barra lateral */
+.sidebar-section {
+    margin-bottom: 25px;    /* 25px de espacio entre secciones */
+}
+
+/* Títulos de sección en barra lateral */
+.sidebar-section h3 {
+    color: #2c3e50;         /* Color azul oscuro */
+    border-bottom: 2px solid #4a6491; /* Línea inferior decorativa azul */
+    padding-bottom: 8px;    /* 8px de espacio entre el texto y la línea */
+    margin-bottom: 15px;    /* 15px de espacio inferior */
+    font-size: 1.2em;       /* Tamaño de fuente mediano-grande */
+}
+
+/* Listas en barra lateral */
+.sidebar-section ul {
+    list-style: none;       /* Elimina las viñetas por defecto de las listas */
+}
+
+/* Elementos de lista en barra lateral */
+.sidebar-section li {
+    margin-bottom: 10px;    /* 10px de espacio entre elementos de lista */
+    padding-left: 15px;     /* Sangría de 15px a la izquierda */
+    position: relative;     /* Permite posicionamiento de pseudo-elementos */
+}
+
+/* Viñetas personalizadas para listas */
+.sidebar-section li:before {
+    content: "•";           /* Usa un punto como contenido */
+    color: #4a6491;         /* Color azul para el punto */
+    position: absolute;     /* Posicionamiento absoluto respecto al elemento li */
+    left: 0;                /* Alineado a la izquierda del elemento li */
+    font-weight: bold;      /* Punto en negrita */
+}
+
+/* Contenedor de habilidades */
+.skills {
+    display: flex;          /* Usa flexbox para disposición flexible */
+    flex-wrap: wrap;        /* Permite que los elementos salten a la siguiente línea */
+    gap: 8px;               /* Espacio de 8px entre elementos */
+}
+
+/* Etiquetas individuales de habilidades */
+.skill-tag {
+    background: #4a6491;    /* Fondo azul */
+    color: white;           /* Texto blanco */
+    padding: 5px 12px;      /* Espaciado interno: 5px vertical, 12px horizontal */
+    border-radius: 15px;    /* Esquinas completamente redondeadas */
+    font-size: 0.9em;       /* Tamaño de fuente pequeño */
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+
+.content {
+    flex: 2;                /* Ocupa 2 partes del espacio disponible (relación 2:1 con .sidebar) */
+}
+
+/* Secciones del contenido principal */
+.content-section {
+    margin-bottom: 30px;    /* 30px de espacio entre secciones */
+}
+
+/* Títulos de sección en contenido principal */
+.content-section h2 {
+    color: #2c3e50;         /* Color azul oscuro */
+    border-bottom: 2px solid #4a6491; /* Línea inferior decorativa azul */
+    padding-bottom: 8px;    /* 8px de espacio entre texto y línea */
+    margin-bottom: 20px;    /* 20px de espacio inferior */
+    font-size: 1.5em;       /* Tamaño de fuente grande */
+}
+
+/* Elementos individuales de información */
+.info-item {
+    margin-bottom: 20px;    /* 20px de espacio entre elementos */
+}
+
+/* Títulos de elementos de información */
+.info-item h3 {
+    color: #2c3e50;         /* Color azul oscuro */
+    margin-bottom: 8px;     /* 8px de espacio inferior */
+    font-size: 1.2em;       /* Tamaño de fuente mediano-grande */
+}
+
+/* Párrafos en elementos de información */
+.info-item p {
+    color: #666;            /* Color gris medio */
+    line-height: 1.5;       /* Interlineado de 1.5 para mejor legibilidad */
+}
+
+/* Listas en elementos de información */
+.info-item ul {
+    margin-left: 20px;      /* Sangría de 20px a la izquierda */
+    color: #666;            /* Color gris medio */
+}
+
+/* Elementos de lista en información */
+.info-item li {
+    margin-bottom: 5px;     /* 5px de espacio entre elementos de lista */
+}
+
+/* ===== DISEÑO RESPONSIVE ===== */
+
+/* Media query para tablets y móviles (ancho máximo 768px) */
+@media (max-width: 768px) {
+    /* En móviles, el contenido principal se apila verticalmente */
+    .main-content {
+        flex-direction: column; /* Cambia la dirección de flexbox a columna */
+    }
+    
+    /* Tamaños de fuente reducidos para portada en móviles */
+    .portada h1 {
+        font-size: 2em;     /* Reduce el tamaño de fuente a 2em */
+    }
+    
+    .portada h2 {
+        font-size: 1.4em;   /* Reduce el tamaño de fuente a 1.4em */
+    }
+    
+    /* Botones de navegación en posición normal para móviles */
+    .nav-buttons {
+        position: static;   /* Cambia a posición normal (no fija) */
+        text-align: center; /* Centra los botones */
+        margin-bottom: 20px; /* Agrega 20px de margen inferior */
+    }
+    
+    /* Ajustes de padding para móviles */
+    .portada {
+        padding: 40px 20px; /* Reduce el padding: 40px vertical, 20px horizontal */
+    }
+    
+    .hoja-vida {
+        padding: 20px;      /* Reduce el padding a 20px */
+    }
+    
+    /* Tamaños reducidos para foto en móviles */
+    .foto-estudiante1 {
+        width: 180px;       /* Reduce el ancho a 180px */
+        height: 220px;      /* Reduce el alto a 220px */
+    }
+    
+    /* Tamaños reducidos para logos en móviles */
+    .logo-espe-real {
+        width: 120px;       /* Reduce el ancho a 120px */
+        height: 120px;      /* Reduce el alto a 120px */
+    }
+    
+    .university-logo-real {
+        width: 60px;        /* Reduce el ancho a 60px */
+        height: 60px;       /* Reduce el alto a 60px */
+    }
+}
+/* ===== ESTILOS PARA EL CÓDIGO QR ===== */
+
+.qr-section {
+    margin-bottom: 25px;    /* 25px de espacio inferior */
+    text-align: center;     /* Centra el contenido del QR */
+}
+
+.qr-container {
+    width: 150px;           /* Ancho fijo para el contenedor del QR */
+    height: 150px;          /* Alto fijo para el contenedor del QR */
+    margin: 0 auto 10px;    /* Centrado automático y 10px de margen inferior */
+    border-radius: 10px;    /* Esquinas redondeadas */
+    overflow: hidden;       /* Oculta cualquier parte de la imagen que sobresalga */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra suave */
+    border: 2px solid #4a6491; /* Borde azul */
+    background: white;      /* Fondo blanco por si la imagen no carga */
+}
+
+.qr-image {
+    width: 100%;            /* Ocupa todo el ancho del contenedor */
+    height: 100%;           /* Ocupa todo el alto del contenedor */
+    object-fit: cover;      /* Ajusta la imagen para cubrir el espacio */
+    display: block;         /* Elimina espacio inferior de imágenes inline */
+}
+
+.qr-text {
+    font-size: 0.9em;       /* Tamaño de fuente pequeño */
+    color: #666;            /* Color gris medio */
+    font-weight: 500;       /* Peso de fuente medio */
+}
+
+/* Estilos responsive para el QR en móviles */
+@media (max-width: 768px) {
+    .qr-container {
+        width: 120px;       /* Reduce el ancho en móviles */
+        height: 120px;      /* Reduce el alto en móviles */
+    }
+    
+    .qr-text {
+        font-size: 0.8em;   /* Reduce el tamaño de fuente en móviles */
+    }
+}
